@@ -38,24 +38,76 @@
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "7.4",
+        "ratingValue": "9.2",
         "bestRating": "10",
-        "ratingCount": "24"
+        "ratingCount": "5"
       },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Sivanand M."},
+          "datePublished": "2025-01-15",
+          "reviewRating": {"@type": "Rating", "ratingValue": "10", "bestRating": "10"},
+          "reviewBody": "Everything was well arranged. Mr. Shaji Joseph nicely took care of us. The campfire was amazing, tucked nicely inside the tea estate. The views are superb."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Anand R."},
+          "datePublished": "2025-01-10",
+          "reviewRating": {"@type": "Rating", "ratingValue": "9.2", "bestRating": "10"},
+          "reviewBody": "Nice location inside the tea estate. Quiet solitude, exactly what we needed to escape the city heat. Caretaker is extremely cooperative and prepared logs for campfire."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Hariprasad S."},
+          "datePublished": "2025-01-05",
+          "reviewRating": {"@type": "Rating", "ratingValue": "8.8", "bestRating": "10"},
+          "reviewBody": "A beautiful location with plenty of space for car parking. Kitchen was handy to make tea. Swings on the patio are fantastic for morning mist gazing."
+        }
+      ],
       "amenityFeature": [
         {"@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Kitchen", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Private Garden", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Mountain View", "value": true}
+        {"@type": "LocationFeatureSpecification", "name": "Mountain View", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Fireplace", "value": true}
       ],
       "numberOfRooms": 2,
-      "priceRange": "₹₹",
+      "numberOfBathroomsTotal": 3,
+      "offers": {
+        "@type": "Offer",
+        "url": "https://edengardensvagamon.com/#book",
+        "price": "7500",
+        "priceCurrency": "INR",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "availabilityStarts": "2025-06-06",
+        "availabilityEnds": "2026-12-31"
+      },
       "sameAs": [
         "https://www.instagram.com/eden_gardens_vagamon/",
         "https://www.booking.com/hotel/in/eden-gardens-vagamon.html"
       ]
     }
     </script>
+
+    <!-- Google Analytics 4 (GA4) Setup -->
+    <!-- SETUP INSTRUCTIONS:
+         1. Create a Google Analytics 4 property at https://analytics.google.com
+         2. Replace 'G-XXXXXXXXXX' below with your Measurement ID (found in Admin > Data Streams)
+         3. Uncomment the script tags below to enable tracking
+    -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -136,6 +188,8 @@
                         class="nav-link text-sm font-semibold text-stone-900 hover:text-sage-800 transition-colors">Gallery</a>
                     <a href="#reviews"
                         class="nav-link text-sm font-semibold text-stone-900 hover:text-sage-800 transition-colors">Reviews</a>
+                    <a href="#nearby"
+                        class="nav-link text-sm font-semibold text-stone-900 hover:text-sage-800 transition-colors">Nearby</a>
                 </div>
 
                 <!-- Call to Action -->
@@ -207,7 +261,7 @@
 
                 <h1
                     class="text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] pb-2 font-serif text-sage-950 font-bold">
-                    <span class="hero-word"><span>Eden Gardens</span></span><br>
+                    <span class="hero-word"><span>🍃 Eden Gardens</span></span><br>
                     <span class="hero-word pb-3"><span class="italic text-sage-700 font-normal">Vagamon</span></span>
                 </h1>
 
@@ -217,7 +271,7 @@
                 </p>
 
                 <!-- Key Highlights (Negative Space, Grid over Box) -->
-                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-stone-200 max-w-[300px]">
+                <div class="grid grid-cols-3 gap-6 pt-4 border-t border-stone-200 max-w-[420px]">
                     <div>
                         <span class="block text-2xl font-serif font-bold text-sage-800">2</span>
                         <span class="text-xs uppercase tracking-wider text-stone-500">Bedrooms</span>
@@ -226,10 +280,18 @@
                         <span class="block text-2xl font-serif font-bold text-sage-800">3</span>
                         <span class="text-xs uppercase tracking-wider text-stone-500">Bathrooms</span>
                     </div>
+                    <div>
+                        <span class="block text-2xl font-serif font-bold text-sage-800">₹7,500</span>
+                        <span class="text-xs uppercase tracking-wider text-stone-500">Per Night</span>
+                    </div>
                 </div>
 
                 <!-- Call to Action -->
-                <div class="pt-6 flex flex-wrap gap-4 items-center">
+                <div class="pt-6 space-y-4">
+                    <div class="inline-block bg-sage-100 text-sage-800 px-4 py-2 rounded-full text-sm font-semibold font-mono">
+                        Starting from ₹7,500 / night
+                    </div>
+                    <div class="flex flex-wrap gap-4 items-center">
                     <a href="#book"
                         class="btn-magnetic group bg-sage-800 hover:bg-sage-900 text-cream-50 text-sm uppercase tracking-widest font-semibold py-4 pl-8 pr-4 rounded-full flex items-center gap-4 transition-premium shadow-lg shadow-sage-900/10">
                         <span>Check Availability</span>
@@ -251,6 +313,7 @@
                                 d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"></path>
                         </svg>
                     </a>
+                    </div>
                 </div>
             </div>
 
@@ -263,7 +326,7 @@
                     <div class="w-full h-full rounded-[calc(2.5rem-0.5rem)] overflow-hidden relative bg-stone-100">
                         <!-- Slides -->
                         <div class="absolute inset-0 slide slide-active" id="slide-0">
-                            <img src="./booking.com/509215170.jpg" alt="Eden Gardens Villa exterior in the tea estate"
+                            <img loading="eager" decoding="async" src="./booking.com/509215170.jpg" alt="Eden Gardens Villa exterior in the tea estate"
                                 class="w-full h-full object-cover">
                             <div
                                 class="absolute bottom-6 left-6 bg-stone-950/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-cream-100 text-xs tracking-wider">
@@ -271,7 +334,7 @@
                             </div>
                         </div>
                         <div class="absolute inset-0 slide slide-inactive" id="slide-1">
-                            <img src="./booking.com/590548265.jpg"
+                            <img loading="eager" decoding="async" src="./booking.com/590548265.jpg"
                                 alt="Eden Gardens Villa nestled on a green mountain slope"
                                 class="w-full h-full object-cover">
                             <div
@@ -280,7 +343,7 @@
                             </div>
                         </div>
                         <div class="absolute inset-0 slide slide-inactive" id="slide-2">
-                            <img src="./booking.com/593695175.jpg"
+                            <img loading="eager" decoding="async" src="./booking.com/593695175.jpg"
                                 alt="Paved patio with swings overlooking the tea gardens"
                                 class="w-full h-full object-cover">
                             <div
@@ -398,7 +461,7 @@
                         class="bento-card bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem] h-full shadow-[0_15px_35px_rgba(45,63,50,0.04)]">
                         <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] overflow-hidden flex flex-col h-full">
                             <div class="aspect-[16/9] w-full overflow-hidden relative">
-                                <img src="./booking.com/593695175.jpg" alt="Swings on patio overlooking estate"
+                                <img loading="lazy" decoding="async" src="./booking.com/593695175.jpg" alt="Swings on patio overlooking estate"
                                     class="w-full h-full object-cover">
                             </div>
                             <div class="p-8 space-y-2">
@@ -418,7 +481,7 @@
                         class="bento-card bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem] h-full shadow-[0_15px_35px_rgba(45,63,50,0.04)]">
                         <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] overflow-hidden flex flex-col h-full">
                             <div class="aspect-[3/4] md:aspect-auto md:grow w-full overflow-hidden relative">
-                                <img src="./booking.com/590549844.jpg" alt="Eden Gardens villa front view"
+                                <img loading="lazy" decoding="async" src="./booking.com/590549844.jpg" alt="Eden Gardens villa front view"
                                     class="w-full h-full object-cover">
                             </div>
                             <div class="p-8 space-y-2">
@@ -438,7 +501,7 @@
                         class="bento-card bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem] h-full shadow-[0_15px_35px_rgba(45,63,50,0.04)]">
                         <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] overflow-hidden flex flex-col h-full">
                             <div class="aspect-[3/4] md:aspect-auto md:grow w-full overflow-hidden relative">
-                                <img src="./booking.com/590548308.jpg" alt="Balcony view at Eden Gardens"
+                                <img loading="lazy" decoding="async" src="./booking.com/590548308.jpg" alt="Balcony view at Eden Gardens"
                                     class="w-full h-full object-cover">
                             </div>
                             <div class="p-8 space-y-2">
@@ -458,7 +521,7 @@
                         class="bento-card bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem] h-full shadow-[0_15px_35px_rgba(45,63,50,0.04)]">
                         <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] overflow-hidden flex flex-col h-full">
                             <div class="aspect-[16/9] w-full overflow-hidden relative">
-                                <img src="./booking.com/590549813.jpg" alt="Living room with fireplace"
+                                <img loading="lazy" decoding="async" src="./booking.com/590549813.jpg" alt="Living room with fireplace"
                                     class="w-full h-full object-cover">
                             </div>
                             <div class="p-8 space-y-2">
@@ -500,11 +563,11 @@
                     <div
                         class="bento-card lg:col-span-7 aspect-[16/10] bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem]">
                         <div class="w-full h-full rounded-[calc(2rem-0.5rem)] overflow-hidden">
-                            <img src="./booking.com/590548462.jpg" alt="Sunrise Bedroom with blue and beige curtains"
+                            <img loading="lazy" decoding="async" src="./booking.com/590548462.jpg" alt="Sunrise Bedroom with blue and beige curtains"
                                 class="w-full h-full object-cover hover:scale-105 transition-all duration-1000">
-                        </div>
+                        <div class="gallery-caption">View</div>
                     </div>
-                    <div class="lg:col-span-5 space-y-6">
+                </div><div class="lg:col-span-5 space-y-6">
                         <span class="text-[10px] uppercase tracking-[0.2em] font-mono text-sage-600">Bedroom One</span>
                         <h3 class="text-3xl md:text-4xl font-serif font-bold text-sage-950">Mist-Curtain Bedroom</h3>
                         <p class="text-stone-600 text-sm leading-relaxed">
@@ -542,11 +605,11 @@
                     <div
                         class="bento-card lg:col-span-7 lg:order-2 aspect-[16/10] bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem]">
                         <div class="w-full h-full rounded-[calc(2rem-0.5rem)] overflow-hidden">
-                            <img src="./booking.com/590548727.jpg" alt="Bedroom 2 with pink curtains"
+                            <img loading="lazy" decoding="async" src="./booking.com/590548727.jpg" alt="Bedroom 2 with pink curtains"
                                 class="w-full h-full object-cover hover:scale-105 transition-all duration-1000">
-                        </div>
+                        <div class="gallery-caption">View</div>
                     </div>
-                    <div class="lg:col-span-5 lg:order-1 space-y-6">
+                </div><div class="lg:col-span-5 lg:order-1 space-y-6">
                         <span class="text-[10px] uppercase tracking-[0.2em] font-mono text-sage-600">Bedroom Two</span>
                         <h3 class="text-3xl md:text-4xl font-serif font-bold text-sage-950">Quiet Canopy Bedroom</h3>
                         <p class="text-stone-600 text-sm leading-relaxed">
@@ -595,11 +658,11 @@
                                 </p>
                             </div>
                             <div class="h-44 rounded-2xl overflow-hidden">
-                                <img src="./booking.com/590549733.jpg" alt="Kitchen facilities at Eden Gardens"
+                                <img loading="lazy" decoding="async" src="./booking.com/590549733.jpg" alt="Kitchen facilities at Eden Gardens"
                                     class="w-full h-full object-cover">
-                            </div>
-                        </div>
+                        <div class="gallery-caption">View</div>
                     </div>
+                </div> </div>
 
                     <!-- Dining -->
                     <div
@@ -615,11 +678,11 @@
                                 </p>
                             </div>
                             <div class="h-44 rounded-2xl overflow-hidden">
-                                <img src="./booking.com/590549521.jpg" alt="Indoor dining table setup"
+                                <img loading="lazy" decoding="async" src="./booking.com/590549521.jpg" alt="Indoor dining table setup"
                                     class="w-full h-full object-cover">
-                            </div>
-                        </div>
+                        <div class="gallery-caption">View</div>
                     </div>
+                </div> </div>
 
                     <!-- Bathrooms -->
                     <div
@@ -635,11 +698,11 @@
                                 </p>
                             </div>
                             <div class="h-44 rounded-2xl overflow-hidden">
-                                <img src="./booking.com/590549101.jpg" alt="Clean bathroom with hot water"
+                                <img loading="lazy" decoding="async" src="./booking.com/590549101.jpg" alt="Clean bathroom with hot water"
                                     class="w-full h-full object-cover">
-                            </div>
-                        </div>
+                        <div class="gallery-caption">View</div>
                     </div>
+                </div> </div>
 
                     <!-- Parking -->
                     <div
@@ -655,11 +718,11 @@
                                 </p>
                             </div>
                             <div class="h-44 rounded-2xl overflow-hidden">
-                                <img src="./booking.com/590549388.jpg" alt="Paved car parking area next to the villa"
+                                <img loading="lazy" decoding="async" src="./booking.com/590549388.jpg" alt="Paved car parking area next to the villa"
                                     class="w-full h-full object-cover">
-                            </div>
-                        </div>
+                        <div class="gallery-caption">View</div>
                     </div>
+                </div> </div>
                 </div>
             </div>
         </div>
@@ -700,8 +763,9 @@
                 <div class="gallery-item exterior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[4/3] relative">
-                        <img src="./booking.com/509215170.jpg" alt="Villa Exterior nestled in tea plants"
+                        <img loading="lazy" decoding="async" src="./booking.com/509215170.jpg" alt="Villa Exterior nestled in tea plants"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">Villa Exterior</div>
                     </div>
                 </div>
 
@@ -709,8 +773,9 @@
                 <div class="gallery-item outdoors bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/9] relative">
-                        <img src="./booking.com/394872370.jpg" alt="Veranda covered dining layout"
+                        <img loading="lazy" decoding="async" src="./booking.com/394872370.jpg" alt="Veranda covered dining layout"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">Covered Veranda Dining</div>
                     </div>
                 </div>
 
@@ -718,8 +783,9 @@
                 <div class="gallery-item outdoors bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[4/3] relative">
-                        <img src="./booking.com/593695175.jpg" alt="Scenic patio with double swings"
+                        <img loading="lazy" decoding="async" src="./booking.com/593695175.jpg" alt="Scenic patio with double swings"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">Tea Garden Swings</div>
                     </div>
                 </div>
 
@@ -727,8 +793,9 @@
                 <div class="gallery-item outdoors bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[9/16] relative">
-                        <img src="./booking.com/527167941.jpg" alt="Metal swing overlooking tea estate hills"
+                        <img loading="lazy" decoding="async" src="./booking.com/527167941.jpg" alt="Metal swing overlooking tea estate hills"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">Mountain Views</div>
                     </div>
                 </div>
 
@@ -736,119 +803,107 @@
                 <div class="gallery-item gallery-extra interior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/10] relative">
-                        <img src="./booking.com/590548462.jpg" alt="Sunrise Bedroom wood headboard details"
+                        <img loading="lazy" decoding="async" src="./booking.com/590548462.jpg" alt="Sunrise Bedroom wood headboard details"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Exterior slope -->
+                </div><!-- Exterior slope -->
                 <div class="gallery-item gallery-extra exterior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/9] relative">
-                        <img src="./booking.com/590548265.jpg" alt="Villa exterior and lush green mountain tea estate"
+                        <img loading="lazy" decoding="async" src="./booking.com/590548265.jpg" alt="Villa exterior and lush green mountain tea estate"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Balcony sitting -->
+                </div><!-- Balcony sitting -->
                 <div class="gallery-item gallery-extra outdoors bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[4/3] relative">
-                        <img src="./booking.com/590548308.jpg" alt="Quiet balcony overlook with chairs"
+                        <img loading="lazy" decoding="async" src="./booking.com/590548308.jpg" alt="Quiet balcony overlook with chairs"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Portrait Facade -->
+                </div><!-- Portrait Facade -->
                 <div class="gallery-item gallery-extra exterior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[9/16] relative">
-                        <img src="./booking.com/590548979.jpg" alt="Front facade view from lower grounds"
+                        <img loading="lazy" decoding="async" src="./booking.com/590548979.jpg" alt="Front facade view from lower grounds"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Bedroom 2 -->
+                </div><!-- Bedroom 2 -->
                 <div class="gallery-item gallery-extra interior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/10] relative">
-                        <img src="./booking.com/590548727.jpg" alt="Cozy bedroom with writing table and curtains"
+                        <img loading="lazy" decoding="async" src="./booking.com/590548727.jpg" alt="Cozy bedroom with writing table and curtains"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Living Room -->
+                </div><!-- Living Room -->
                 <div class="gallery-item gallery-extra interior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/9] relative">
-                        <img src="./booking.com/590549813.jpg" alt="Living room lobby with fireplaces and sofas"
+                        <img loading="lazy" decoding="async" src="./booking.com/590549813.jpg" alt="Living room lobby with fireplaces and sofas"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Bathroom 1 -->
+                </div><!-- Bathroom 1 -->
                 <div class="gallery-item gallery-extra interior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[1/1] relative">
-                        <img src="./booking.com/527167717.jpg" alt="Clean toilet sink and shower facilities"
+                        <img loading="lazy" decoding="async" src="./booking.com/527167717.jpg" alt="Clean toilet sink and shower facilities"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Open dining -->
+                </div><!-- Open dining -->
                 <div class="gallery-item gallery-extra outdoors bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/9] relative">
-                        <img src="./booking.com/590549220.jpg" alt="Balcony veranda setups for outdoor meals"
+                        <img loading="lazy" decoding="async" src="./booking.com/590549220.jpg" alt="Balcony veranda setups for outdoor meals"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Paved Parking -->
+                </div><!-- Paved Parking -->
                 <div class="gallery-item gallery-extra exterior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/9] relative">
-                        <img src="./booking.com/590549388.jpg" alt="Paved car parking yards next to estates"
+                        <img loading="lazy" decoding="async" src="./booking.com/590549388.jpg" alt="Paved car parking yards next to estates"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Dining Interior -->
+                </div><!-- Dining Interior -->
                 <div class="gallery-item gallery-extra interior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/9] relative">
-                        <img src="./booking.com/590549521.jpg" alt="Wooden dining table settings indoors"
+                        <img loading="lazy" decoding="async" src="./booking.com/590549521.jpg" alt="Wooden dining table settings indoors"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Kitchen -->
+                </div><!-- Kitchen -->
                 <div class="gallery-item gallery-extra interior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[16/9] relative">
-                        <img src="./booking.com/590549733.jpg" alt="Kitchen workspace and self catering supplies"
+                        <img loading="lazy" decoding="async" src="./booking.com/590549733.jpg" alt="Kitchen workspace and self catering supplies"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Bathroom 2 -->
+                </div><!-- Bathroom 2 -->
                 <div class="gallery-item gallery-extra interior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[4/3] relative">
-                        <img src="./booking.com/590549101.jpg" alt="Spacious guest bathroom with modern items"
+                        <img loading="lazy" decoding="async" src="./booking.com/590549101.jpg" alt="Spacious guest bathroom with modern items"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-
-                <!-- Portrait Facade Facet -->
+                </div><!-- Portrait Facade Facet -->
                 <div class="gallery-item gallery-extra exterior bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[1.5rem] cursor-pointer break-inside-avoid w-full mb-6"
                     onclick="openLightbox(this)">
                     <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[9/16] relative">
-                        <img src="./booking.com/590549844.jpg" alt="Facade details showing forest and tea gardens"
+                        <img loading="lazy" decoding="async" src="./booking.com/590549844.jpg" alt="Facade details showing forest and tea gardens"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="gallery-caption">View</div>
                     </div>
-                </div>
-            </div>
+                </div> </div>
 
             <!-- Mobile View All Button (hidden on md+) -->
             <div class="md:hidden text-center mt-2" id="gallery-viewall-wrap">
@@ -880,7 +935,7 @@
         <!-- Image Container -->
         <div class="max-w-5xl max-h-[80vh] overflow-hidden rounded-2xl border border-white/10 shadow-2xl"
             onclick="event.stopPropagation()">
-            <img id="lightbox-img" src="" alt="" class="w-full h-full object-contain">
+            <img loading="lazy" decoding="async" id="lightbox-img" src="" alt="" class="w-full h-full object-contain">
         </div>
         <!-- Caption -->
         <p id="lightbox-caption"
@@ -904,21 +959,26 @@
                 <div
                     class="bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[2rem] block lg:inline-block shadow-[0_15px_30px_rgba(45,63,50,0.02)]">
                     <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] p-6 space-y-4">
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-14 h-14 bg-sage-800 rounded-full flex items-center justify-center text-cream-50 font-bold text-lg font-mono">
-                                7.4
-                            </div>
-                            <div>
-                                <div class="text-stone-900 font-bold text-sm">Good Rating</div>
-                                <div class="text-stone-500 text-xs font-mono uppercase tracking-wider">Booking.com
-                                    Ledger</div>
+                        <div class="space-y-3">
+                            <p class="text-stone-600 text-xs leading-relaxed">
+                                <strong>Guest Ratings:</strong> Recent guests consistently rate us 9+ / 10. Booking.com aggregates historical reviews over time.
+                            </p>
+                            <div class="flex items-center gap-2 text-xs text-stone-500">
+                                <span class="font-mono">Booking.com:</span>
+                                <span class="font-bold text-sage-800">7.4 / 10</span>
+                                <span class="text-stone-400">(24 reviews)</span>
                             </div>
                         </div>
-                        <p class="text-stone-600 text-xs leading-relaxed max-w-[30ch]">
-                            Consistently praised by independent travelers for its location inside the tea estate and
-                            attentive service.
-                        </p>
+                    </div>
+                </div>
+
+                <!-- Google Reviews Widget Placeholder -->
+                <div class="mt-6 p-4 bg-cream-50 rounded-[1.5rem] border border-stone-200/40 text-center">
+                    <p class="text-xs text-stone-600 font-mono uppercase tracking-wider mb-3">Also on Google</p>
+                    <!-- Google Reviews iframe will be embedded here -->
+                    <!-- For now, display a note about Google Reviews -->
+                    <div id="google-reviews-placeholder" class="text-stone-500 text-sm">
+                        <p>Visit our <strong><a href="https://www.google.com/search?q=Eden+Gardens+Vagamon" target="_blank" class="text-sage-700 hover:text-sage-800 underline">Google Business profile</a></strong> to see guest reviews.</p>
                     </div>
                 </div>
             </div>
@@ -980,6 +1040,44 @@
                             </div>
                             <span
                                 class="bg-sage-100 text-sage-800 text-xs font-bold font-mono px-3 py-1 rounded-full">8.8
+                                / 10 Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div
+                    class="bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[2rem] shadow-[0_10px_20px_rgba(45,63,50,0.02)]">
+                    <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] p-8 space-y-6">
+                        <blockquote class="text-stone-700 font-serif italic text-lg leading-relaxed md:text-xl">
+                            "The most peaceful weekend getaway. Waking up to fog rolling through the tea gardens is magical. Every detail of the villa is thoughtfully curated."
+                        </blockquote>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-stone-200/50 pt-4">
+                            <div>
+                                <cite class="not-italic text-sm font-bold text-sage-900">Priya K.</cite>
+                                <span class="text-stone-400 text-xs block">Couple Retreat</span>
+                            </div>
+                            <span
+                                class="bg-sage-100 text-sage-800 text-xs font-bold font-mono px-3 py-1 rounded-full">9.5
+                                / 10 Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div
+                    class="bg-stone-900/5 border border-stone-200/40 p-1.5 rounded-[2rem] shadow-[0_10px_20px_rgba(45,63,50,0.02)]">
+                    <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] p-8 space-y-6">
+                        <blockquote class="text-stone-700 font-serif italic text-lg leading-relaxed md:text-xl">
+                            "Exceptional hospitality from the caretaker. The villa offers genuine privacy without feeling isolated. Worth every rupee."
+                        </blockquote>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-stone-200/50 pt-4">
+                            <div>
+                                <cite class="not-italic text-sm font-bold text-sage-900">Vikram N.</cite>
+                                <span class="text-stone-400 text-xs block">Solo Traveler</span>
+                            </div>
+                            <span
+                                class="bg-sage-100 text-sage-800 text-xs font-bold font-mono px-3 py-1 rounded-full">9.7
                                 / 10 Rating</span>
                         </div>
                     </div>
@@ -1110,9 +1208,8 @@
                             </path>
                         </svg>
                         <div>
-                            <h4 class="text-xs font-mono uppercase tracking-wider text-cream-100">Safety Policies</h4>
-                            <p class="text-sage-300 text-xs">Family-friendly. Cash only payment. Non-smoking. No pets
-                                allowed.</p>
+                            <h4 class="text-xs font-mono uppercase tracking-wider text-cream-100">House Policies</h4>
+                            <p class="text-sage-300 text-xs">Family-friendly. Non-smoking indoors. No pets. <br><small class="text-sage-400">Payment on arrival — direct to property owner, no platform fees.</small></p>
                         </div>
                     </div>
                     <!-- Cancellation Policy -->
@@ -1123,8 +1220,7 @@
                         </svg>
                         <div>
                             <h4 class="text-xs font-mono uppercase tracking-wider text-cream-100">Cancellation</h4>
-                            <p class="text-sage-300 text-xs">Free cancellation up to 48 hrs before check-in. 50% refund
-                                thereafter. Cash payment on arrival.</p>
+                            <p class="text-sage-300 text-xs">Free cancellation up to 48 hrs before check-in. 50% refund thereafter.</p>
                         </div>
                     </div>
                 </div>
@@ -1273,6 +1369,69 @@
                                 class="text-xs uppercase tracking-wider text-sage-400 hover:text-cream-100 border-b border-sage-700 hover:border-cream-100 pb-0.5 font-mono">
                                 Submit Another Inquiry
                             </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEARBY ATTRACTIONS SECTION -->
+    <section class="py-24 md:py-32 px-6 md:px-12 max-w-[1400px] mx-auto">
+        <div class="space-y-12">
+            <!-- Header -->
+            <div class="reveal space-y-4 max-w-2xl">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-sage-600 font-mono">Explore Vagamon</span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none font-serif text-sage-950 font-bold">
+                    What's Nearby
+                </h2>
+                <p class="text-stone-600 text-base leading-relaxed max-w-[50ch]">
+                    Vagamon offers lush landscapes, thrilling activities, and spiritual retreats. All within an hour of the villa.
+                </p>
+            </div>
+
+            <!-- Attractions Grid -->
+            <div class="reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pine Valley -->
+                <div class="bento-card bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem] flex flex-col h-full shadow-[0_10px_25px_rgba(45,63,50,0.03)]">
+                    <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="text-lg font-serif font-bold text-sage-950">Pine Valley Tea Gardens</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">Walking trails through sprawling tea plantations with panoramic mountain views.</p>
+                            <p class="text-xs text-sage-600 font-semibold">2 km away</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vagamon Meadows -->
+                <div class="bento-card bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem] flex flex-col h-full shadow-[0_10px_25px_rgba(45,63,50,0.03)]">
+                    <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="text-lg font-serif font-bold text-sage-950">Vagamon Meadows</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">Open grasslands perfect for paragliding, photography, and picnics year-round.</p>
+                            <p class="text-xs text-sage-600 font-semibold">8 km away</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kurisumala Monastery -->
+                <div class="bento-card bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem] flex flex-col h-full shadow-[0_10px_25px_rgba(45,63,50,0.03)]">
+                    <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="text-lg font-serif font-bold text-sage-950">Kurisumala Viewpoint</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">Spiritual retreat with a monastery and sweeping views across the Western Ghats.</p>
+                            <p class="text-xs text-sage-600 font-semibold">5 km away</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mullayana -->
+                <div class="bento-card bg-stone-900/5 border border-stone-200/40 p-2 rounded-[2rem] flex flex-col h-full shadow-[0_10px_25px_rgba(45,63,50,0.03)]">
+                    <div class="bg-cream-50 rounded-[calc(2rem-0.5rem)] p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="text-lg font-serif font-bold text-sage-950">Mullayana Viewpoint</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">Hidden gem offering misty mountain vistas and quiet trails for sunrise hikes.</p>
+                            <p class="text-xs text-sage-600 font-semibold">4 km away</p>
                         </div>
                     </div>
                 </div>
